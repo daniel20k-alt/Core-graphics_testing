@@ -11,35 +11,28 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Core_graphics_testing" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIImageView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mDO-wW-VLD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pu-qD-3Ve">
+                                <rect key="frame" x="0.0" y="-10" width="414" height="906"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2o-4W-uGd">
-                                <rect key="frame" x="181" y="832" width="52" height="30"/>
-                                <state key="normal" title="Redraw"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-2J-hxN">
+                                <rect key="frame" x="158" y="832" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="redrawTapped"/>
                                 <connections>
-                                    <action selector="redrawTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uf0-g4-VOB"/>
+                                    <action selector="redrawTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ij5-b5-scz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="mDO-wW-VLD" firstAttribute="centerX" secondItem="I2o-4W-uGd" secondAttribute="centerX" id="60i-ba-Yph"/>
-                            <constraint firstItem="mDO-wW-VLD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HX2-xn-yxA"/>
-                            <constraint firstItem="mDO-wW-VLD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="b6u-uM-3By"/>
-                            <constraint firstItem="mDO-wW-VLD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yVx-cl-W9f"/>
-                            <constraint firstItem="I2o-4W-uGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxr-qu-O7U"/>
-                            <constraint firstItem="I2o-4W-uGd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="z83-nk-4s5"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="8bC-Xf-vdC" id="XQr-wW-eDc"/>
-                        <outlet property="redrawTapped" destination="8bC-Xf-vdC" id="Hax-GE-Flv"/>
+                        <outlet property="imageView" destination="5pu-qD-3Ve" id="ljh-UU-l9E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -43,6 +43,12 @@ class ViewController: UIViewController {
         case 3:
             drawRotatedSquares()
             
+        case 4:
+            drawLines()
+            
+        case 5:
+            drawImagesAndText()
+            
         default:
             break
         }
@@ -115,6 +121,59 @@ class ViewController: UIViewController {
         
         imageView.image = image
     }
+     
+    func drawLines() {
+        //draw boxe inside boxes
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let image = renderer.image { ctx in
+            ctx.cgContext.translateBy(x: 256, y: 256)
+            
+            var first = true
+            var lenght: CGFloat = 256
+            
+            for _ in 0 ..< 256 {
+                ctx.cgContext.rotate(by: .pi/2)
+                if first {
+                    ctx.cgContext.move(to: CGPoint(x: lenght, y: 50))
+                    first = false
+                } else {
+                    ctx.cgContext.addLine(to: CGPoint(x: lenght, y: 50))
+                }
+                lenght *= 0.99
+            }
+            
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.strokePath()
+        }
+        
+        imageView.image = image
+    }
+    
+    func drawImagesAndText() {
+          //draw boxe inside boxes
+          let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+          
+          let image = renderer.image { ctx in
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            
+            let attributes: [NSAttributedString.Key: Any] = [ .font: UIFont.systemFont(ofSize: 36), .paragraphStyle: paragraphStyle]
+            
+            let string = "Testing displaing text with NSAttributedString"
+            
+            let attributedString = NSAttributedString(string: string, attributes: attributes)
+            attributedString.draw(with: CGRect(x: 32, y: 32, width: 448, height: 448), options: .usesLineFragmentOrigin, context: nil)
+            
+            let meerkat = UIImage(named: "meerkatJosh")
+            meerkat?.draw(at: CGPoint(x: 300, y: 150))
+            
+            
+          }
+          
+          imageView.image = image
+      }
 }
 
 

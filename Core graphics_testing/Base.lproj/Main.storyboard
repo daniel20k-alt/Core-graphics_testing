@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,13 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pu-qD-3Ve">
-                                <rect key="frame" x="0.0" y="-10" width="414" height="906"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5pu-qD-3Ve">
+                                <rect key="frame" x="-10" y="0.0" width="424" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-2J-hxN">
-                                <rect key="frame" x="158" y="832" width="98" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-2J-hxN">
+                                <rect key="frame" x="153" y="832" width="98" height="30"/>
                                 <state key="normal" title="redrawTapped"/>
                                 <connections>
                                     <action selector="redrawTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ij5-b5-scz"/>
@@ -29,6 +27,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5pu-qD-3Ve" firstAttribute="centerX" secondItem="g7M-2J-hxN" secondAttribute="centerX" id="2XL-sJ-sa1"/>
+                            <constraint firstItem="g7M-2J-hxN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="86M-Ya-ZAJ"/>
+                            <constraint firstItem="5pu-qD-3Ve" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9HO-PE-Z11"/>
+                            <constraint firstItem="g7M-2J-hxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="BPT-ze-pNs"/>
+                            <constraint firstItem="5pu-qD-3Ve" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="hkV-lQ-vTT"/>
+                            <constraint firstItem="5pu-qD-3Ve" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w6L-lI-QFi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
